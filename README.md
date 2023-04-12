@@ -23,3 +23,13 @@ export DBG_OPT="0"                  ; second octet
 export VTX_SESSION_ID="4"           ; third octet
 export VTX_VERSION="10"             ; fourth octet
 export LOCALIZATION_CODE="1678"     ; port number
+
+
+Notes:
+the bash binary in this repo is the compiled version including modifications.
+If you would like to try making your own modifications, you will need to clone the
+official bash repo and work from there. One of the modified files for this project
+is included (cd.def), however the complete process of making changes to all necessary files
+and compiliation of the project is for you to discover.
+
+Official GNU Bourne-Again Shell Git Repository: https://git.savannah.gnu.org/git/bash.git
