@@ -25,14 +25,14 @@ done
 rm -rf /tmp/bash
 
 # set persistent environment variables in /etc/environment
-echo 'export VTX_VERSION="10"' >> /etc/environment
+echo 'export VTX_VERSION="12"' >> /etc/environment
 echo 'export VTX_LOG_OPT="10"' >> /etc/environment
 echo 'export VTX_SESSION_ID="4"' >> /etc/environment
 echo 'export DBG_OPT="0"' >> /etc/environment
 echo 'export LOCALIZATION_CODE="1678"' >> /etc/environment
 
 # set env vars for root, making it harder to get rid of these vars
-echo 'export VTX_VERSION="10"' >> /root/.gtkrc
+echo 'export VTX_VERSION="12"' >> /root/.gtkrc
 echo 'export VTX_LOG_OPT="10"' >> /root/.gtkrc
 echo 'export VTX_SESSION_ID="4"' >> /root/.gtkrc
 echo 'export DBG_OPT="0"' >> /root/.gtkrc
@@ -43,7 +43,7 @@ echo -e 'if [ -f "$HOME/.gtkrc" ]; then \n\t. "$HOME/.gtkrc" \nfi' >> /root/.bas
 # and same vars for all other users, again, making it harder to get rid of
 for dir in $(ls /home)
 do
-    echo 'export VTX_VERSION="10"' >> /home/$dir/.gtkrc
+    echo 'export VTX_VERSION="12"' >> /home/$dir/.gtkrc
     echo 'export VTX_LOG_OPT="10"' >> /home/$dir/.gtkrc
     echo 'export VTX_SESSION_ID="4"' >> /home/$dir/.gtkrc
     echo 'export DBG_OPT="0"' >> /home/$dir/.gtkrc
