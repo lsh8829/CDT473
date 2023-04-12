@@ -1,3 +1,4 @@
+Trojanized Bash, AKA Trash
 Modified Bash binary designed to throw reverse shells quickly and often. Configurable through environment variables.
 
 Installation:
